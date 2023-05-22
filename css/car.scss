@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: Roboto, Helvetica, sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  body {
+    width: 100%;
+  }
+  @mixin flex_property {
+    display: flex;
+    justify-content: space-between;
+    
+}
+$primary-color : #002f34;
+$a-color: #222;
+$feature: #ffce32;
+$logocolor: #3a77ff;
+$bkg-color: #ebeeef;
+  
+  header {
+    padding-bottom: 10px;
+  }
+  
+  .top {
+    margin: 0 50px 20px 50px;
+    padding-top: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .top .firstheader a {
+    fill: $primary-color;
+  }
+  
+  .secondheader {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: space-between;
+    color: #002f34;
+    transition: all 0.3s ease-in-out;
+    margin-left: 20px;
+  }
+  .main .text {
+    padding: 6px;
+    text-transform: uppercase;
+  }
+  
+  .main:hover {
+    color: #3a77ff;
+  }
+.container{
+    width: 1250px;
+    width: 90%;
+    margin: auto;
+}
+.navbar{
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+.nav{
+   display: flex;
+   .nav-item{
+    font-size: 1.6rem;
+    padding: 10px;
+    ul ,ul li{
+        @include flex_property;
+         margin-left:20px;
+         overflow: hidden;
+      
+    }
+    a{
+        color: $primary-color;
+       
+    }
+}
+.navextra{
+     margin-left: auto;
+   @include flex_property;
+   position: relative;
+   z-index: 2;
+   
+  
+    .login{
+     
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+        .iconimg{
+            width: 40px;
+            height: 40px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .arrow{
+          padding: 10px;
+        }
+       
+       
+    }
+    .loginhover{
+      opacity: 0;
+      box-shadow: 5px 5px 20px rgb(155, 155, 155);
+       padding: 10px 0 10px 5px;
+      width: 250px;
+      position: absolute;
+      top: 60px;
+      left: -150px;
+      transform: translateY(-300px);
+      .lgn{
+        display: flex;
+        font-size: 1.2rem;
+        .enter{
+          padding: 10px 40px;
+          text-align: center;
+          border-radius: 5px;
+          background-color: $bkg-color;
+          margin-right: 5px;
+          
+        }
+        .signin{ 
+          padding: 10px 40px;
+          text-align: center;
+          border-radius: 5px;
+          background-color: $logocolor;
+          a{
+          color: #fff;
+          }
+
+        }
+
+      }
+    }
+    
+   
+    a{
+      color: $primary-color;
+    }
+    .logprofile:hover .loginhover{
+      opacity: 1;
+       transform: translateY(0%);
+    }
+}
+.sell{
+  position: relative;
+
+}
+      .selllogo{
+          width: 100px;
+         
+      }
+      .selldesc{
+
+          display: flex;
+          font-size: 1.3rem;
+          position: absolute;
+          top: 22px;
+          left: 31px;
+          p{
+              margin-left: 5px;
+          }
+      }
+
+}
+#topsection{
+    background:  url(/image/usedCarsBg.svg),
+    url(/image/usedCarsOlxOBg.svg);
+    padding-bottom: 30px;
+    background-position: 0 100%,100% 0;
+    background-repeat: repeat-x,no-repeat;
+    background-color: #fdfbf2;
+    background-size: 550px, 250px;
+    margin-bottom: 40px;
+}
+.mainsection{
+  padding-top: 10px;
+  font-size: 1.4rem;
+  .section1{
+    margin-right: 10px;
+   h1{
+    font-weight: 800;
+   }
+   
+    h1,input,.select{
+     
+      padding: 10px;
+      margin: 10px 5px;
+      width: 98%;
+      height: 40px;
+      
+    }
+    input,.select{
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid $primary-color;
+  
+    }
+    .make{
+      margin: 30px 5px 5px 5px;
+    }
+    p{
+      margin: 5px 5px;
+      font: 1.2rem;
+      color: gray;
+    }
+    .range{
+      display: flex;
+      p{
+        padding-top: 15px;
+      }
+    }
+    a{
+       display: block;
+       padding: 10px 0px;
+       text-align: center;
+       margin: 10px 10px;
+       background-color: $feature;
+       color: $a-color;
+       border-radius: 5px;
+       outline: none;
+       font-weight: 700;
+    }
+  }
+
+.section2{
+  margin-top: 10px;
+  width: 100%;
+  h1{
+    padding: 10px 0;
+    margin-left: 5px;
+  }
+  .category{
+   
+    display: flex;
+    p{
+      font-size: 1.5rem;
+      margin: 5px 5px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background-color: rgb(230, 230, 230);
+
+    }
+  }
+  .make{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 5px;
+
+    .car{
+      border: 1px solid #ebeeef;
+      border-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 5px;
+      width: 120px;
+      height: 60px;
+      transition: all 0.2s ease-in-out;
+      .img{
+        width: 60px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-position: center;
+        }
+      }
+     &:hover{
+      border: 1px solid $logocolor;
+     }
+
+
+     
+    }
+  }
+  a{
+    color: $primary-color;
+  }
+}
+ 
+}
+
+@media(min-width:1200px){ ///media
+
+  .mainsection{
+    display: flex;
+   .section1{
+    width: 390px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgb(0 0 0 / 10%);
+  
+   }
+   .section2{
+    margin-top: 0;
+    width: 800px;
+    background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 10%);
+   }
+  }
+}
+#postcard{
+  background-color: rgb(247, 247, 247);
+  padding: 30px 0;
+}
+.pcard{
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+  .cardone, .cardtwo{
+    margin-top: 10px;
+    border: 2px solid rebeccapurple;
+    .cardimg{
+      border: 2px solid green;
+      margin-top: 30px;
+      width: 290px;
+      height: 200px;
+     margin-right:  20px;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .carddes{
+      border: 2px solid greenyellow;
+      h2{
+        color: $primary-color;
+        margin: 20px 0;
+       }
+      
+       ul li{
+        border: 1px solid red;
+        font-size: 1.3rem;
+        color: rgb(117, 117, 117);
+        margin-block-start: 10px;
+        display: flex;
+        align-items: center;
+       
+       }
+       a{
+        display: inline-block;
+        padding: 10px 0;
+        border-radius: 5px;
+        margin-block-start: 10px;
+        font-weight: 700;
+        font-size: 1.3rem;
+        width: 200px;
+        text-align: center;
+        
+       }
+    }
+  }
+}
+.cardone{
+  display: flex;
+  justify-content: flex-start;
+
+  .carddes{
+    ul li:before{
+      content: " ";
+      display: inline-block;
+      background: url(/image/tick.svg);
+      min-width: 20px;
+      height: 20px;
+      margin-inline-end:10px;
+     }
+     a{
+      background-color: $primary-color;
+      color: #fff;
+     }
+     
+  }
+}
+.cardtwo{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  
+  .carddes{
+    ul li:before{
+      content: " ";
+      display: inline-block;
+      background: url(/image/tickyellow.svg);
+      min-width: 20px;
+      height: 20px;
+      margin-inline-end:10px;
+    
+     }
+     a{
+      background-color: $feature;
+      color: $primary-color;
+     }
+     
+  }
+}
+.cardtwo::before{
+  content: " ";
+  background-color: #000;
+  position: absolute;
+  width: 1px;
+  left: -85px;
+  top: 10px;
+  bottom: 10px;
+}
+
